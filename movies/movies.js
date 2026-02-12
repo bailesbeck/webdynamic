@@ -1,9 +1,3 @@
-
-let html = `
-
-`
-const movieList = document.getElementById("movie-list");
-movieList.innerHTML = html;
 const movies = [
       {
         title: "Spider-Man: Into the Spider-Verse",
@@ -46,26 +40,25 @@ const movies = [
         stars: "⭐⭐⭐⭐"
       }
     ];
-
-const movieList = document.getElementById("movie-list");
-movie.forEach(movie => {
-
-  const Article = document.createElement("article");
-  Article.className = "movie";
-
-    let html = `<article class="movie">
-        <h2>${movie.title}</h2>
-        <p><strong>Release Date:</strong> ${movie.date}</p>
-        <img src="${movie.imgSrc}" alt="${movie.imgAlt}">
-        <p>${movie.description}</p>
-        <p><strong>Ages:</strong> ${movie.ages}</p>
-        <p><strong>Genre:</strong> ${movie.genre}</p>
-        <p><strong>Rating:</strong> ${movie.stars.length}</p>
-        <p><strong>Stars:</strong> ${movie.stars}</p>
-
-    </article>`;
-    movieList.innerHTML = html;
-    movieList.appendChild(Article);
-
-
-});
+ 
+    const movieList = document.getElementById('movie-list');
+ 
+    movies.forEach(movie => {
+ 
+        // Code for going through each movie and creating content for that movie
+        let html = `<article class="movie">
+        
+                        <h2>${movie.title}</h2>
+                        <img src=${movie.imgSrc} alt=${movie.imgAlt}>
+                        <p><strong>Release Date:</strong>${movie.date}</p>
+                        <p><strong>Recommended Age:</strong> ${movie.ages}</p>
+                        <p><strong>Genre:</strong> ${movie.genre}</p>
+                        <p><strong>Rating:</strong> <span aria-label="${movie.stars.length} of 5 stars" role="img">${movie.stars}</span></p>
+                        <p id='desc'>${movie.description}</p>
+                    </article>`
+ 
+        movieList.innerHTML += html;
+    });
+          
+ 
+movieList.innerHTML = html
