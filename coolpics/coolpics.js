@@ -1,46 +1,24 @@
 const gallery = document.querySelector('#images');
-const modal = document.querySelector('dialog');
+const modal = document.querySelector('.modal');
 const modalImage = modal.querySelector('img');
-const closeButton = modal.querySelector('.close-viewer');
+const closeBtn = modal.querySelector('.close-btn');
 
-// Menu button
-const menuBtn = document.querySelector('.menu-btn');
-const navLinks = document.querySelector('nav');
+gallery.addEventListener('click', (e) => {
+    const img = e.target.closest('img');
+    if (!img) return;
 
+    modalImage.src = img.src.replace('sm', 'full');
+    modalImage.alt = img.alt;
 
-menuBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+    modal.classList.add('show');
 });
 
-
-
-// Event listener for opening the modal
-gallery.addEventListener('click', openModal);
-
-function openModal(e) {
-    const img = e.target.closest('img'); // find nearest img
-
-    if (!img) return; // stop if we didn't click an image
-
-    const src = img.getAttribute('src');
-    const alt = img.getAttribute('alt');
-
-    const full = src.replace('sm', 'full');
-
-    modalImage.src = full;
-    modalImage.alt = alt;
-
-    modal.showModal();
-}
-
-// Close modal on button click
-closeButton.addEventListener('click', () => {
-    modal.close();
+closeBtn.addEventListener('click', () => {
+    modal.classList.remove('show');
 });
 
-// Close modal if clicking outside the image
-modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.close();
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.remove('show');
     }
 });
