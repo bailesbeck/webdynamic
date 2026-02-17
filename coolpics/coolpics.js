@@ -1,4 +1,4 @@
-const gallery = document.querySelector('#images');
+const gallery = document.querySelector('.images');
 const modal = document.querySelector('.modal');
 const modalImage = modal.querySelector('img');
 const closeBtn = modal.querySelector('.close-btn');
