@@ -50,11 +50,11 @@ const movies = [
         
                         <h2>${movie.title}</h2>
                         <img src=${movie.imgSrc} alt=${movie.imgAlt}>
-                        <p><strong>Release Date:</strong>${movie.date}</p>
+                        <p><strong>Release Date:</strong> ${movie.date}</p>
                         <p><strong>Recommended Age:</strong> ${movie.ages}</p>
                         <p><strong>Genre:</strong> ${movie.genre}</p>
                         <p><strong>Rating:</strong> <span aria-label="${movie.stars.length} of 5 stars" role="img">${movie.stars}</span></p>
-                        <p id='desc'>${movie.description}</p>
+                        <p id='desc'> ${movie.description}</p>
                     </article>`
  
         movieList.innerHTML += html;
