@@ -1,11 +1,11 @@
-const gallery = document.querySelector('.images');
+const gallery = document.querySelector('#images');
 const modal = document.querySelector('dialog');
 const modalImage = modal.querySelector('img');
 const closeButton = modal.querySelector('.close-viewer');
 
 // Menu button
 const menuBtn = document.querySelector('.menu-btn');
-const navLinks = document.querySelector('.nav-links');
+const navLinks = document.querySelector('nav');
 
 
 menuBtn.addEventListener('click', () => {
