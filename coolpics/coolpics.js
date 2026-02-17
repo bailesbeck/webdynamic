@@ -1,15 +1,15 @@
 const gallery = document.querySelector('#images');
+
 const modal = document.querySelector('.modal');
-const modalImage = modal.querySelector('img');
+const modalImg = modal.querySelector('.modal-img');
 const closeBtn = modal.querySelector('.close-btn');
 
 gallery.addEventListener('click', (e) => {
-  const img = e.target.closest('img');
-  if (!img) return;
+  const clickedImg = e.target.closest('img');
+  if (!clickedImg) return;
 
-  const fullSrc = img.src.replace('sm', 'full'); 
-  modalImage.src = fullSrc;
-  modalImage.alt = img.alt;
+  modalImg.src = clickedImg.src;
+  modalImg.alt = clickedImg.alt;
 
   modal.classList.add('show');
 });
@@ -17,6 +17,7 @@ gallery.addEventListener('click', (e) => {
 closeBtn.addEventListener('click', () => {
   modal.classList.remove('show');
 });
+
 
 modal.addEventListener('click', (e) => {
   if (e.target === modal) {
