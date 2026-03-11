@@ -93,7 +93,7 @@ function search() {
 let html = `<div class="hike-card">
         <div class="hike-content">
           <h2>${hike.name}</h2>
-          <div class="hike-tags">
+          <div class="${hike.tag}</class>
             <button>Canyon</button>
             <button>Tetons</button>
           </div>

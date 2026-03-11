@@ -1,6 +1,6 @@
 #credit-card-form {
     display: grid;
-    grid-template-columns: repeat(4, 100px); 
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto 200px 50px;
     gap: 10px;
     max-width: 500px;
@@ -19,6 +19,7 @@
 
 .front {
     background: #d3d3d3;
+    grid-column: 1 / 4;
     z-index: 2;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto auto;
@@ -27,7 +28,7 @@
 
 .back {
     background: #bebebe;
-    grid-column: 2 / 5; 
+    grid-column: 2 / 4; 
     margin-top: 40px;   
     z-index: 1;
     grid-template-columns: 1fr;
@@ -53,7 +54,6 @@
 }
 
 #submitBtn {
-    grid-column: 5;
+    grid-column: 4;
     grid-row: 3;
-    height: 40px;
 }
