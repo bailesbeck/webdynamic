@@ -63,9 +63,12 @@
 }
 
 .cvc-area {
+    grid-column: 2;
+    grid-row: 2;
     justify-self: end;
-    width: 60px;
+    width: 70px;
 }
+
 
 #submitBtn {
     grid-column: 4;
