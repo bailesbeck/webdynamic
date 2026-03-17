@@ -1,59 +1,78 @@
 #credit-card-form {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 200px 50px;
+    grid-template-rows: auto 260px auto;
     gap: 10px;
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
 }
 
 .card-face {
-    grid-column: 1 / 4; 
-    grid-row: 2;
     border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(4, 8, 46, 0.2);
+    padding: 25px;
+    box-shadow: 0 10px 18px rgba(0,0,0,0.2);
     display: grid;
-    height: 250px;
+    height: 220px;
 }
 
 .front {
-    background: #d3d3d3;
+    background: #d9d9d9;
     grid-column: 1 / 4;
+    grid-row: 2;
     z-index: 2;
+
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto auto;
-    align-items: end;
+    gap: 10px;
 }
 
 .back {
-    background: #bebebe;
-    grid-column: 2 / 4; 
-    margin-top: 40px;   
+    background: #c7c7c7;
+    grid-column: 2 / 5;
+    grid-row: 2;
+    margin-top: 50px;
     z-index: 1;
+
     grid-template-columns: 1fr;
-    grid-template-rows: 40px 1fr auto;
-    justify-items: end;
+    grid-template-rows: 40px auto auto;
+    align-items: start;
 }
-
-.cvc-area{
-    width: 20%;
-}
-
-
-.total-label { grid-column: 1 / -1; font-weight: bold; }
-.card-number { grid-column: 1 / -1; }
-.exp-area { grid-column: 2; }
 
 .magnetic-stripe {
-    background: #181818;
+    background: #111;
     width: 100%;
     height: 40px;
-    grid-row: 1;
-    margin-top: 10px;
+}
+
+.total-label {
+    grid-column: 1 / -1;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card-number {
+    grid-column: 1 / -1;
+}
+
+.card-holder {
+    grid-column: 1;
+}
+
+.exp-area {
+    grid-column: 2;
+}
+
+.cvc-area {
+    justify-self: end;
+    width: 60px;
 }
 
 #submitBtn {
     grid-column: 4;
     grid-row: 3;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 3px solid #444;
+    background: #e5e5e5;
+    font-size: 16px;
 }
