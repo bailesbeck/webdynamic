@@ -63,10 +63,8 @@
 }
 
 .cvc-area {
-    grid-column: 2;
-    grid-row: 2;
     justify-self: end;
-    width: 70px;
+    width: 60px;
 }
 
 
