@@ -1,22 +1,25 @@
-#credit-card-form {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 260px auto;
-    gap: 10px;
-    max-width: 700px;
-    margin: 40px auto;
-}
-
-.card-front,
-.card-back {
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 10px 18px rgba(0,0,0,0.25);
-    display: grid;
-    height: 240px;
+body {
+    background: #e6e6e6;
     font-family: Georgia, serif;
 }
 
+#payment-form {
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: auto 220px auto;
+    justify-content: center;
+    margin-top: 60px;
+    position: relative;
+}
+.card-front,
+.card-back {
+    width: 360px;
+    height: 210px;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+    display: grid;
+}
 
 .card-front {
     background: #d3d3d3;
@@ -26,102 +29,89 @@
 
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto auto;
-    gap: 15px;
+    gap: 12px;
 }
-
 
 .card-back {
     background: #c7c7c7;
     grid-column: 2 / 5;
     grid-row: 2;
-    margin-top: 60px;
+    margin-top: 50px;
     z-index: 1;
 
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px auto;
+    grid-template-rows: 40px auto;
 }
 
-
 .stripe {
+    height: 40px;
     background: black;
-    height: 50px;
     width: 100%;
 }
 
-
 .total {
     grid-column: 1 / -1;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
 }
 
+.chip {
+    justify-self: end;
+    font-size: 22px;
+}
 
 .card-number {
     grid-column: 1 / -1;
 }
 
 .card-number input {
-    width: 100%;
-    max-width: 420px;
-}
-
-.card-name {
-    grid-column: 1;
+    width: 260px;
 }
 
 .card-name input {
-    width: 100%;
-    max-width: 300px;
+    width: 200px;
 }
 
-
 #cardExpiration {
-    grid-column: 2;
+    justify-self: start;
 }
 
 .exp-inputs {
     display: flex;
-    gap: 10px;
+    gap: 8px;
 }
 
 .exp-inputs input {
-    width: 70px;
+    width: 55px;
 }
 
-
 input {
-    padding: 10px;
-    border-radius: 5px;
+    padding: 8px;
     border: 1px solid #777;
-    font-size: 16px;
+    border-radius: 5px;
+    font-size: 14px;
 }
 
 
 .cvc-group {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    position: absolute;
+    right: 40px;
+    top: 120px;
+    text-align: right;
 }
 
 .cvc-group input {
-    width: 80px;
+    width: 60px;
 }
-
 
 .submit-btn {
     grid-column: 4;
     grid-row: 3;
+    justify-self: end;
 
-    padding: 10px 20px;
-    background-color: #dcdcdc;
+    padding: 8px 18px;
+    background: #ddd;
     border: 2px solid #333;
     border-radius: 10px;
-    box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
-    cursor: pointer;
-    font-size: 16px;
-}
-.chip {
-    justify-self: end;
-    font-size: 24px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+    font-weight: bold;
 }
