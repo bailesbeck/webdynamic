@@ -7,7 +7,7 @@
   .card {
     background: #777676;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+    box-shadow: 0 8px 16px rgba(95, 95, 95, 0.9);
     width: 400px; 
     margin: 100px auto;
   }
@@ -15,7 +15,7 @@
   .image{
     width: 400px;
     border-radius: 15px 15px 0 0;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+    box-shadow: 0 8px 16px rgba(120, 120, 120, 0.9);
     }
 
   .name {
