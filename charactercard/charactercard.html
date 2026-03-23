@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Card</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.card {
+    width: 250px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2 id="name"></h2>
+    <img id="image" src="" alt="character image">
+
+    <p><strong>Class:</strong> <span id="class"></span></p>
+    <p><strong>Level:</strong> <span id="level"></span></p>
+    <p><strong>Health:</strong> <span id="health"></span></p>
+
+    <button onclick="attack()">Attack</button>
+    <button onclick="levelUp()">Level Up</button>
+</div>
+
+<script>
+const character = {
+    name: "Aelric",
+    class: "Warrior",
+    level: 1,
+    health: 100,
+    image: "https://via.placeholder.com/150",
+
+    attacked() {
+        this.health -= 20;
+
+        if (this.health <= 0) {
+            this.health = 0;
+            alert(this.name + " has died 💀");
+        }
+
+        updateCard();
+    },
+
+    levelUp() {
+        this.level += 1;
+        updateCard();
+    }
+};
+
+function updateCard() {
+    document.getElementById("name").textContent = character.name;
+    document.getElementById("class").textContent = character.class;
+    document.getElementById("level").textContent = character.level;
+    document.getElementById("health").textContent = character.health;
+    document.getElementById("image").src = character.image;
+}
+
+function attack() {
+    character.attacked();
+}
+
+function levelUp() {
+    character.levelUp();
+}
+
+updateCard();
+</script>
+
+</body>
+</html>
