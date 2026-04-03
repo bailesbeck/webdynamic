@@ -1,13 +1,13 @@
 /* if you are using any Google fonts change the font names below to your fonts. 
 Any spaces in your font name should be replaced with a +. 
 Fonts are separated by a | */
-@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed|Lato");
 
 :root {
   /* change the values below to your colors from your palette */
   --primary-color: #396e94;
-  --secondary-color: #e7c24f;
-  --accent1-color: #a42212;
+  --secondary-color: #c7a12d;
+  --accent1-color: #706e6e;
   --accent2-color: white;
 
   /* change the values below to your chosen font(s) */
