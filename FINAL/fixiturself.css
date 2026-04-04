@@ -4,10 +4,11 @@ body {
     background-color: #f4f4f4;
 }
 
-main {
+main-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
 }
 header {
     background-color: #222;
