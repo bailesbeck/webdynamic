@@ -29,6 +29,7 @@ nav a:hover {
     background-color: #666;
 }
 
+
 .search-bar {
     text-align: center;
     margin: 20px;
@@ -39,7 +40,47 @@ nav a:hover {
     padding: 10px;
     font-size: 16px;
 }
+.card {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 25px;
 
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+    text-align: center;
+}
+
+.step {
+    display: none;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.step.active {
+    display: block;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
 
 .categories {
     display: grid;
