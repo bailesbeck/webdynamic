@@ -51,19 +51,25 @@ nav a:hover {
 
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 
     text-align: center;
 }
 
 .step {
     display: none;
-    font-size: 18px;
-    line-height: 1.5;
+    animation: fade 0.3s ease-in-out;
 }
+
 
 .step.active {
     display: block;
+}
+
+
+@keyframes fade {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
 .buttons {
