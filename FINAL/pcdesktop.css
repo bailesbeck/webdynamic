@@ -30,6 +30,10 @@ nav a:hover {
 }
 
 
+.logo {
+    width: 200px;
+    height: auto;
+}
 .search-bar {
     text-align: center;
     margin: 20px;
