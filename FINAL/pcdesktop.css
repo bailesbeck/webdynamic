@@ -61,6 +61,12 @@ nav a:hover {
     animation: fade 0.3s ease-in-out;
 }
 
+.step img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
 
 .step.active {
     display: block;
