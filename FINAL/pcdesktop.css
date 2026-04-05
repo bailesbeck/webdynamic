@@ -62,8 +62,10 @@ nav a:hover {
 }
 
 .step img {
-    max-width: 100px;
-    height: auto;
+     width: 100%; 
+    max-width: 400px;
+    height: auto;      
+    border-radius: 10px;
     margin-bottom: 15px;
 }
 
