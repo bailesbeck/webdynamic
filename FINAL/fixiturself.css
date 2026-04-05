@@ -7,7 +7,7 @@ body {
 main-content {
     max-width: 700px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 60px;
     text-align: center;
 
     background-color: #f9f9f9;
@@ -29,7 +29,7 @@ h1 {
 }
 
 .logo {
-    width: 60px;
+    width: 200px;
     height: auto;
 }
 
