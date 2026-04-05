@@ -52,7 +52,13 @@ nav a {
     padding: 12px 20px;
     text-decoration: none;
 }
-
+.portrait p {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+    text-align: center;
+}
 nav a:hover {
     background-color: #666;
 }
