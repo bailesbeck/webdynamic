@@ -58,6 +58,8 @@ nav a {
     border-radius: 50%;
     margin-top: 20px;
     text-align: center;
+    display: flex;
+    border-radius: 10px;
 }
 nav a:hover {
     background-color: #666;
